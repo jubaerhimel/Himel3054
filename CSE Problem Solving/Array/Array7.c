@@ -1,4 +1,3 @@
-/*  Average Attendance */
 
 #include <stdio.h>
 
