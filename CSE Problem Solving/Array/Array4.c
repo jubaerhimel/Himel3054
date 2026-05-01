@@ -1,4 +1,4 @@
-/* 2D Array Tasks:
+/* 2D Array 
 1. Each student’s percentage
 2. Find highest */
 
