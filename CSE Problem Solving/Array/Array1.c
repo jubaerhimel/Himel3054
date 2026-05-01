@@ -1,39 +1,32 @@
-/*A class attendance system records student attendance using an array, where:
-1 represents “present”
-0 represents “absent”
-The attendance data is stored in the system for easy access and analysis.
-
-Based on this data, write a program to:
-Calculate the total number of students who are present and absent.*/
+/*Reverse the array elements..*/
 
 #include <stdio.h>
 
 int main() {
-    int n;
+    int n, i = 0, temp;
+    int arr[100];
 
-    printf("Enter number of students: ");
+    printf("Enter size: ");
     scanf("%d", &n);
 
-    int arr[n];
-
-    printf("Enter attendance (1 = present, 0 = absent):\n");
-    for (int i = 0; i < n; i++) {
+    while (i < n) {
         scanf("%d", &arr[i]);
+        i++;
     }
 
-    int present = 0, absent = 0;
-
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == 1) {
-            present++;
-        } else {
-            absent++;
-        }
+    i = 0;
+    while (i < n / 2) {
+        temp = arr[i];
+        arr[i] = arr[n - i - 1];
+        arr[n - i - 1] = temp;
+        i++;
     }
 
-    printf("Total Present = %d\n", present);
-    printf("Total Absent = %d\n", absent);
+    printf("Reversed array: ");
+    i = 0;
+    while (i < n) {
+        printf("%d ", arr[i]);
+        i++;
+    }
 
-
-    return 0;
 }
